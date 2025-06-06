@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0"
+            prefWidth="1280.0" style="-fx-background-color: #0a0c14;" stylesheets="@../css/styles.css"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="dev.http418.sgmmssimulator.controller.MainContainerController">
+    <top>
+        <HBox spacing="20.0" styleClass="nav-bar" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="8.0" left="24.0" right="24.0" top="8.0"/>
+            </padding>
+            <children>
+                <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" spacing="20.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label styleClass="nav-title" text="SGMMS">
+                            <tooltip>
+                                <Tooltip text="Sistema de Gestión y Monitoreo del Movimiento de Seguridad"/>
+                            </tooltip>
+                        </Label>
+                        <Label fx:id="sceneTitleLabel" text="Centro de monitoreo" textFill="WHITE">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" spacing="20.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label fx:id="clockLabel" text="00:00:00" textFill="WHITE">
+                            <!-- CLOCK ICON HERE -->
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <RadioButton userData="monitoring-center-view" selected="true">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/monitor.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <toggleGroup>
+                                <ToggleGroup fx:id="switchSceneGroup"/>
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton toggleGroup="$switchSceneGroup" userData="traffic-map-view">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../icons/Crash.png"/>
+                                </ImageView>
+                            </graphic>
+                        </RadioButton>
+
+                        <RadioButton toggleGroup="$switchSceneGroup" userData="incident-panel-view">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../icons/Crash.png"/>
+                                </ImageView>
+                            </graphic>
+                        </RadioButton>
+                    </children>
+                </HBox>
+            </children>
+
+        </HBox>
+
+    </top>
+    <center>
+        <StackPane fx:id="sceneContainer" style="-fx-background-color: #0a0c14;">
+            <fx:include source="monitoring-center-view.fxml"/>
+        </StackPane>
+    </center>
+</BorderPane>

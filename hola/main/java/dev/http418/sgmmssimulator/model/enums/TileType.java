@@ -1,0 +1,24 @@
+package dev.http418.sgmmssimulator.model.enums;
+
+public enum TileType {
+    ROAD_VERTICAL,
+    ROAD_INTERSECTION,
+    ROAD_HORIZONTAL,
+    ROAD_CORNER_NW,
+    ROAD_CORNER_NE,
+    ROAD_CORNER_SW,
+    ROAD_CORNER_SE,
+    ROAD_T_SOUTH,
+    ROAD_T_NORTH,
+    ROAD_T_EAST,
+    ROAD_T_WEST,
+    STREET_VERTICAL,
+    STREET_HORIZONTAL,
+    STREET_INTERSECTION,
+    HOSPITAL,
+    POLICE_STATION,
+    FIRE_STATION,
+    RESIDENTIAL,
+    COMMERCIAL,
+    INDUSTRIAL;
+}

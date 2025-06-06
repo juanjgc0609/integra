@@ -1,0 +1,46 @@
+.nav-title {
+    -fx-font-weight: bold;
+    -fx-font-size: 24px;
+    -fx-text-fill: #00c8ff;
+}
+.nav-bar .tooltip {
+    -fx-background-color: #141923b3;
+    -fx-text-fill: white;
+    -fx-padding: 4px;
+    -fx-border-color: #4c6975;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-font-size: 14px;
+}
+
+.nav-bar {
+    -fx-background-color: #141923b3;
+}
+
+.nav-bar .radio-button {
+    -fx-padding: 6px;
+    -fx-background-color: #1e2535;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+.nav-bar .radio-button:hover {
+    -fx-background-color: #2d3a4b;
+}
+.nav-bar .radio-button:selected {
+    -fx-background-color: #4c5c7a;
+}
+.nav-bar .radio-button .radio {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-min-width: 0;
+    -fx-max-width: 0;
+    -fx-shape: "";
+    -fx-opacity: 0; /* Asegura que sea completamente invisible */
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+}

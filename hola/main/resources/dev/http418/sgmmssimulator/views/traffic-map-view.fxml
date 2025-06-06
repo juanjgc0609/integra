@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0"
+            prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="dev.http418.sgmmssimulator.controller.TrafficMapController">
+    <center>
+        <Canvas fx:id="canvasElement" height="576.0" width="1024.0" BorderPane.alignment="CENTER"/>
+    </center>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    <bottom>
+        <Label fx:id="consoleLabel" alignment="CENTER" text="Select a vehicle to start, you can move the camera with W A S D" textFill="WHITE" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+            </padding>
+            <BorderPane.margin>
+                <Insets top="4.0"/>
+            </BorderPane.margin>
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+    </bottom>
+</BorderPane>
